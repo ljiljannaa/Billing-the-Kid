@@ -1,0 +1,120 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+header {
+    @include clearfix;
+
+        img {
+            background-color: $red;
+            float: right;
+            width: 5%;
+            height: 4em;
+        }
+    
+    nav {
+        background-color: $header-footer;
+        float: left;
+        width: 95%;
+        padding: 1em 2em;
+        height: 4em;
+        
+
+        ul {
+            list-style: none;
+            text-align: right;
+            line-height: 2em;
+
+            li {
+                display: inline-block;
+                margin-left: 2em;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 13px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 2em 0;
+    text-align: center;
+    background-image: url("../slike/intro.jpg");
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    
+    .main-box {
+        background-color: #3d3c3c80;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.5em;
+       
+        p, h1 {
+            color: white;
+            
+        }
+    }
+}
+
+.buttons {
+    padding: 2em 10em;
+    text-align: right;
+}
+
+#button {
+    text-decoration: none;
+    border: 1px solid $hover-color;
+    color: $text-color;
+    padding: 1em 2em;
+    border-radius: 30px;
+    margin-left: 2em;
+    font-size: 13px;
+
+    &:hover {
+        background-color: $hover-color;
+        color: white;
+    }
+}
+
+.pictures {
+    background-color: $section-bg;
+    padding: 4em 25em;
+
+   .picture {
+        @include clearfix;
+
+        img {
+            float: left;
+            width: 150px;
+            border-radius: 50%;
+            opacity: 0.75;
+        }
+
+        h3, p {
+            padding-left: 35%;
+
+        }
+
+        h3 {
+            padding-top: 2em;
+            text-transform: uppercase;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: $red;
+        }
+        
+   }
+
+}
